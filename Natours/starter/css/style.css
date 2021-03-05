@@ -7,17 +7,24 @@ Dark green: #28b485
 
 */
 
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
 }
 
 body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    font-size: 16px;
-    padding: 30px;
+    /*font-size: 16px; */
+    padding: 3rem;
+    box-sizing: border-box;
 }
 
 .header {
@@ -33,12 +40,12 @@ body {
 
 .logo-box {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
 }
 
 .logo {
-    height: 35px;
+    height: 3.5rem;
 }
 
 .text-box {
@@ -54,15 +61,15 @@ body {
     color: #fff;
 
     backface-visibility: hidden;
-    margin-bottom: 60px;
+    margin-bottom: 6rem;
 }
 
 .heading-primary-main {
     display: block;
-    font-size: 72px;
+    font-size: 7rem;
     font-weight: 400;
-    letter-spacing: 35px;
-    padding: 20px;
+    letter-spacing: 3.5rem;
+    padding: 2rem;
 
     animation-name: moveInFromLeft;
     animation-duration: 1s;
@@ -70,9 +77,9 @@ body {
 
 .heading-primary-sub {
     display: block;
-    font-size: 24px;
+    font-size: 2.5rem;
     font-weight: 400;
-    letter-spacing: 17.4px;
+    letter-spacing: 1.75rem;
 
     animation-name: moveInFromRight;
     animation-duration: 1s;
@@ -81,11 +88,11 @@ body {
 @keyframes moveInFromLeft {
     0% {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(-10rem);
     }
 
     80% {
-        transform: translateX(10px);
+        transform: translateX(1rem);
     }
 
     100% {
@@ -97,11 +104,11 @@ body {
 @keyframes moveInFromRight {
     0% {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(10rem);
     }
 
     80% {
-        transform: translateX(-10px);
+        transform: translateX(-1rem);
     }
 
     100% {
@@ -114,22 +121,22 @@ body {
 .btn:link {
     text-decoration: none;
     text-transform: uppercase;
-    padding: 20px 45px;
-    font-size: 20px;
+    padding: 2rem 4.5rem;
+    font-size: 2rem;
     display: inline-block;
-    border-radius: 100px;
+    border-radius: 10rem;
 
     transition: all .2s;
     position: relative;
 }
 
 .btn:hover {
-    transform: translateY(-3px);
+    transform: translateY(-.3rem);
     box-shadow: 0 10px 20px rgba(0,0,0,.2);
 }
 
 .btn:active {
-    transform: translateY(-1px);
+    transform: translateY(-.1rem);
     box-shadow: 0 5px 10px rgba(0,0,0,.2);
 }
 
@@ -139,7 +146,7 @@ body {
     width: 100%;
     display: inline-block;
     position: absolute;
-    border-radius: 100px;
+    border-radius: 10rem;
     top: 0;
     left: 0;
     z-index: -1;
@@ -147,7 +154,7 @@ body {
 }
 
 .btn-discover {
-    font-size: 24px;
+    font-size: 2.5rem;
     background-color: #fff;
     color: #777;
 }
@@ -165,7 +172,7 @@ body {
 @keyframes moveInFromBottom {
     0% {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(3rem);
     }
 
     100% {
